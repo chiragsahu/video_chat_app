@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:video_chat_app/main.dart';
+import 'package:video_chat_app/videocallscreen.dart';
 
 class DoctorListCard extends StatefulWidget {
   DoctorListCard({Key? key}) : super(key: key);
@@ -54,21 +56,23 @@ class _DoctorListCardState extends State<DoctorListCard> {
               ),
             ),
             Expanded(
-              flex: 1,
+                flex: 1,
                 child: TextButton(
-              onPressed: () {},
-              child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(18)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text("Connect"),
-                      Icon(Icons.chevron_right_rounded)
-                    ],
-                  )),
-            ))
+                  onPressed: () {
+                    navigatorKey.currentState!.push(MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const VideocallScreen(),
+                    ));
+                  },
+                  child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.amber,
+                          borderRadius: BorderRadius.circular(18)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [Text("Connect")],
+                      )),
+                ))
           ],
         ),
       ),

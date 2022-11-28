@@ -18,8 +18,7 @@ class _VideocallScreen extends State<VideocallScreen> {
   late RtcEngine _engine;
 
   static const appId = APP_ID;
-  static const token =
-      APP_TOKEN;
+  static const token = APP_TOKEN;
   static const channel = "test_channel";
 
   @override
@@ -84,7 +83,7 @@ class _VideocallScreen extends State<VideocallScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Agora Video Call'),
+        title: const Text('Meet'),
       ),
       body: Stack(
         children: [

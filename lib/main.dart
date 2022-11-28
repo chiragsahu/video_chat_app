@@ -17,10 +17,13 @@ const MaterialColor white = MaterialColor(
   },
 );
 
+final navigatorKey = GlobalKey<NavigatorState>();
+
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: ThemeData(primaryColor: Colors.white, primarySwatch: white),
     home: const Homescreen(),
+    navigatorKey: navigatorKey,
   ));
 }
